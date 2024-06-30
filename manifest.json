@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "ShieldIn",
+    "version": "0.0.1",
+    "description": "This Chrome browser extension hides ads on LinkedIn.",
+    "permissions": ["scripting"],
+  "background": {
+      "service_worker": "extension.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.css"],
+      "extension_ids": [
+      ]
+      }
+    ],
+  "content_scripts": [
+      {
+          "matches": [
+          "*://*.linkedin.com/*"
+        ],
+        "css": ["hide.css"]
+      }
+  ],
+    "host_permissions": [
+      "*://*.linkedin.com/*"
+    ]
+}
