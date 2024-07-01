@@ -11,11 +11,3 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       });
     }
   });
-
-
-function runLinkedinScript() {
-    chrome.tabs.executeScript({
-        file: 'linkedin.js'
-    });
-    return true;
-}
